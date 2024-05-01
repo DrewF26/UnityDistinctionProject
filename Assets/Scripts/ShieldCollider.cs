@@ -27,6 +27,7 @@ public class ShieldCollider : MonoBehaviour
             CollisionCount += 1;
 
             Debug.Log(CollisionCount);
+        // Use UpdateHealth(x) x is deduction, don't make negative 
         }
 
         if (CollisionInfo.collider.tag == "Cylinder")
