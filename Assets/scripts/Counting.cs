@@ -8,11 +8,11 @@ public class Counting : MonoBehaviour
 {
     public float TimeLeft;
     public TextMeshProUGUI TimeText;
-    bool TimerOn = false;
+    bool TimerOn = true;
     // Start is called before the first frame update
     void Start()
     {
-        TimerOn = true;
+
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class Counting : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        TimeText.text = minutes + " minutes and " + seconds + "seconds";
+        TimeText.text = minutes + ":"+ seconds;
     }
 
 }

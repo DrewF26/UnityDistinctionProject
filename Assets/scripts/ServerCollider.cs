@@ -4,7 +4,7 @@ public class ServerCollider : MonoBehaviour
 {
 
     public int CollisionCount = 0;
-    public bool Detecting = true;
+    public bool Detecting = false;
     PlayerHealth healthScript;
 
     void Start()
@@ -27,14 +27,14 @@ public class ServerCollider : MonoBehaviour
             return;
         }
         // logs when server collides with "Collision Object"
-        if(CollisionInfo.collider.tag=="Collision Object")
+        if(CollisionInfo.collider.tag== "Bad Packet")
         {
             
-            healthScript.UpdateHealth(2);
+            healthScript.UpdateHealth(-2);
             //Collision Object disapears
         }
       
-        if (CollisionInfo.collider.tag == "Cylinder")
+        if (CollisionInfo.collider.tag == "Good Packet")
         {
 
             healthScript.UpdateHealth(3);

@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void UpdateHealth(int healthChange)
     {
-        health -= healthChange;
+        health += healthChange;
         healthText.text = "Health:" + health;
 
     }
