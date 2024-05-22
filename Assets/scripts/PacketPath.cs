@@ -5,8 +5,9 @@ using UnityEngine;
 public class PacketPath : MonoBehaviour
 {
     public GameObject Server;
-        
-    
+
+    public int Speed;
+
     private void OnCollisionEnter(Collision collision)
     {
         //if collide with shield do add to score/money/currency
@@ -24,8 +25,8 @@ public class PacketPath : MonoBehaviour
 
     void Update()
     {
-        
 
+        MovePacket(Speed);
     }
         // Start is called before the first frame update
 

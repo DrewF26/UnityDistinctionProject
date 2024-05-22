@@ -1259,7 +1259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314567764}
   m_Layer: 0
-  m_Name: packets
+  m_Name: Bad packets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1431,7 +1431,7 @@ GameObject:
   - component: {fileID: 371947939}
   m_Layer: 0
   m_Name: packet 3
-  m_TagString: Collision Object
+  m_TagString: Bad Packet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2669,7 +2669,7 @@ GameObject:
   - component: {fileID: 1134957344}
   m_Layer: 0
   m_Name: packet 2
-  m_TagString: Collision Object
+  m_TagString: Bad Packet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3145,8 +3145,8 @@ GameObject:
   - component: {fileID: 1483841694}
   - component: {fileID: 1483841698}
   m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: Cylinder
+  m_Name: good packet
+  m_TagString: Good Packet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3282,7 +3282,7 @@ GameObject:
   - component: {fileID: 1491965102}
   m_Layer: 0
   m_Name: packet 1
-  m_TagString: Collision Object
+  m_TagString: Bad Packet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3413,7 +3413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Server: {fileID: 745469600}
-  speed: 10
+  Speed: 5
 --- !u!1 &1654978585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,7 +3464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24f3301f31e347e89cf26bb617d81b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 100
+  TimeLeft: 60
   TimeText: {fileID: 1654978588}
 --- !u!114 &1654978588
 MonoBehaviour:
@@ -3791,6 +3791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841679103}
   - component: {fileID: 1841679102}
+  - component: {fileID: 1841679104}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3827,6 +3828,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1841679104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841679101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7500e6e162f34c709371c7f4749eecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1982115353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4132,8 +4145,9 @@ GameObject:
   - component: {fileID: 2085343607}
   - component: {fileID: 2085343606}
   - component: {fileID: 2085343605}
+  - component: {fileID: 2085343608}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ShieldOnButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4203,9 +4217,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745469607}
+      - m_Target: {fileID: 2085343603}
         m_TargetAssemblyTypeName: ShieldCollider, Assembly-CSharp
-        m_MethodName: StartCollisionDetect
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4213,7 +4227,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2085343603}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -4265,6 +4279,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085343603}
   m_CullTransparentMesh: 1
+--- !u!114 &2085343608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085343603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7500e6e162f34c709371c7f4749eecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2105413387
 GameObject:
   m_ObjectHideFlags: 0
