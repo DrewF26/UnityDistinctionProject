@@ -14,7 +14,7 @@ public class PacketPath : MonoBehaviour
 
         //if collide with server take damage and disappear
 
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     public void MovePacket(int speed)
@@ -25,7 +25,6 @@ public class PacketPath : MonoBehaviour
 
     void Update()
     {
-
         MovePacket(Speed);
     }
         // Start is called before the first frame update

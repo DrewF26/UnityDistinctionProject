@@ -8,7 +8,7 @@ public class Counting : MonoBehaviour
 {
     public float TimeLeft;
     public TextMeshProUGUI TimeText;
-    bool TimerOn = true;
+    public bool TimerOn = true;
     // Start is called before the first frame update
     void Start()
     {
