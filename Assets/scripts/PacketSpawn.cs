@@ -8,6 +8,7 @@ public class PacketSpawn : MonoBehaviour
     public GameObject badPacket;
     public bool spawning;
     public GameObject timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,6 @@ public class PacketSpawn : MonoBehaviour
     void Update()
     {
         bool timerOn = timer.GetComponent<Counting>().TimerOn;
-        float timeUpdate = timer.GetComponent<Counting>().TimeLeft;
-
         if (timerOn == false)
         {
             return;
@@ -28,12 +27,36 @@ public class PacketSpawn : MonoBehaviour
         {
             return;
         }
-        if(spawning == true)
+        if(timerOn == true)
         {
-            if(timerOn == true)
+            if(spawning == true)
             {
-                Instantiate(badPacket, spawnPoint.position, spawnPoint.rotation);
+                SpawnBadGuys();
             }
         }
     }
+
+    void SpawnTrue()
+    {
+        spawning = true;
+    }
+    void SpawnBadGuys()
+    {
+        bool timerOn = timer.GetComponent<Counting>().TimerOn;
+
+        if(timerOn == true)
+        {
+            Instantiate(badPacket, spawnPoint.position, spawnPoint.rotation);
+            spawning = false;
+            Invoke("SpawnTrue", 5.0f);
+            Invoke("SpawnBadGuys", 5.0f);
+        }
+    }
+    //IEnumerator Wait()
+    //{
+
+    //    yield return new WaitForSecondsRealtime(5);
+
+    //}
 }
+

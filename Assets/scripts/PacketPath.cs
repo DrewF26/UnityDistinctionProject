@@ -14,9 +14,13 @@ public class PacketPath : MonoBehaviour
 
         //if collide with server take damage and disappear
 
-        Destroy(gameObject);
+        Invoke("Death", 0.1f);
     }
 
+    void Death()
+    {
+        Destroy(gameObject);
+    }
     public void MovePacket(int speed)
     {
         Transform serverTransform = Server.GetComponent<Transform>();
