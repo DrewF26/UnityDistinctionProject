@@ -6,32 +6,41 @@ public class PacketSpawn : MonoBehaviour
 {
     public Transform spawnPoint;
     public GameObject badPacket;
-    public bool spawning;
+    bool spawning;
     public GameObject timer;
+    public bool AllowSpawning;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         bool timerOn = timer.GetComponent<Counting>().TimerOn;
-        if (timerOn == false)
+
+        if(AllowSpawning == false)
         {
             return;
         }
-        if(spawning == false)
+        if(AllowSpawning == true)
         {
-            return;
-        }
-        if(timerOn == true)
-        {
-            if(spawning == true)
+            if (timerOn == false)
             {
-                SpawnBadGuys();
+                return;
+            }
+            if (spawning == false)
+            {
+                return;
+            }
+            if (timerOn == true)
+            {
+                if (spawning == true)
+                {
+                    SpawnBadGuys();
+                }
             }
         }
     }
