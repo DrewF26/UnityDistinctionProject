@@ -8,6 +8,8 @@ TagManager:
   - Cylinder
   - Good Packet
   - Bad Packet
+  - Shield
+  - Server
   layers:
   - Default
   - TransparentFX

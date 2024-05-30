@@ -14,11 +14,16 @@ public class PacketSpawn : MonoBehaviour
     void Start()
     {
         spawning = true;
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        //move on x-axis
+
         bool timerOn = timer.GetComponent<Counting>().TimerOn;
 
         if(AllowSpawning == false)
