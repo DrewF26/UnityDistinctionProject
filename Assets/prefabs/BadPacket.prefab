@@ -148,4 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Server: {fileID: 938846740532249037, guid: 0ed6071ad97034e12a6e4ae082f48481, type: 3}
   Player: {fileID: 679337080560621168, guid: 9ed087da17486492a91a27e522cb5f20, type: 3}
-  Speed: 5
+  Speed: 20
