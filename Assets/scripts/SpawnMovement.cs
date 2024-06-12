@@ -6,8 +6,8 @@ public class SpawnMovement : MonoBehaviour
 {
     private Vector3 StartPos;
     private Vector3 EndPos;
-    private float MoveDistance = 1.7f;
-    private float MoveSpeed = 1.37f;
+    public float MoveDistance;
+    public float MoveSpeed;
 
     // Start is called before the first frame update
     void Start()

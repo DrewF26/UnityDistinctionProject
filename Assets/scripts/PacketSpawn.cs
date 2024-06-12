@@ -9,6 +9,7 @@ public class PacketSpawn : MonoBehaviour
     bool spawning;
     public GameObject timer;
     public bool AllowSpawning;
+    public float SpawnInterval;
 
     // Start is called before the first frame update
     void Start()
@@ -56,14 +57,15 @@ public class PacketSpawn : MonoBehaviour
     }
     void SpawnBadGuys()
     {
+        
         bool timerOn = timer.GetComponent<Counting>().TimerOn;
 
         if(timerOn == true)
         {
             Instantiate(badPacket, spawnPoint.position, spawnPoint.rotation);
             spawning = false;
-            Invoke("SpawnTrue", 5.0f);
-            Invoke("SpawnBadGuys", 5.0f);
+            Invoke("SpawnTrue", SpawnInterval);
+            Invoke("SpawnBadGuys", SpawnInterval);
         }
     }
     //IEnumerator Wait()
