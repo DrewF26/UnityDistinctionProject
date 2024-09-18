@@ -9,7 +9,9 @@ public class PacketSpawn : MonoBehaviour
     bool spawning;
     public GameObject timer;
     public bool AllowSpawning;
-    public float SpawnInterval;
+    public float iSpawnInterval;
+    public float fSpawnInterval;
+    float SpawnInterval;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +24,8 @@ public class PacketSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        SpawnInterval = Random.Range(iSpawnInterval, fSpawnInterval);
         //move on x-axis
-
         bool timerOn = timer.GetComponent<Counting>().TimerOn;
 
         if(AllowSpawning == false)
